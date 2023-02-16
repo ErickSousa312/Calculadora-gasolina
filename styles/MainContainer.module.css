@@ -1,0 +1,11 @@
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background: rebeccapurple;
+  justify-content: center;
+  border: solid 2px;
+  margin: 15px 14px auto 14px;
+  border-radius: 30px;
+}
+
