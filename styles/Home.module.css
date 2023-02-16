@@ -23,6 +23,8 @@
     margin-bottom: 1em;
     padding-left: 0.5em;
     box-sizing: border-box;
+    color: aliceblue;
+    font-size: 50xp;
 }
 .buttonArea{
     border: solid 2px;
@@ -35,4 +37,19 @@
     margin-bottom: 0.7em;
     padding-left: 0.5em;
     color: aliceblue;
+}
+.inputs:focus {
+    outline: none;
+  }
+
+/* Remove as setas do input number em navegadores webkit */
+.inputs::-webkit-outer-spin-button,
+.inputs::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove as setas do input number em outros navegadores */
+.inputs[type=number] {
+    -moz-appearance: textfield;
 }

@@ -28,7 +28,6 @@ export default function Home() {
         />
         <h1 className={styles.font}>
           Você sabe qual combustível compensa mais abastecer seu carro?<br />
-
           Utilize a calculadora abaixo:<br /><br />
         </h1>
 
@@ -36,14 +35,14 @@ export default function Home() {
           <div className="fields">
             <div className="field name">
               <label className={styles.fontLabel}>Preço - litro etanol (R$):</label><br/>
-              <input className={styles.inputs} type="text" name="name"  onChange={onChangeInput} value={dataForm.name} />
+              <input className={styles.inputs} type="number" name="name"  onChange={onChangeInput} value={dataForm.name} />
             </div>
           </div>
 
           <div className="fields">
             <div className="field name">
               <label className={styles.fontLabel}>Preço - litro gasolina (R$):</label><br/>
-              <input className={styles.inputs} type="email" name="email"  onChange={onChangeInput} value={dataForm.email} />
+              <input className={styles.inputs} type="number" name="email"  onChange={onChangeInput} value={dataForm.email} />
             </div>
           </div>
           <div >
