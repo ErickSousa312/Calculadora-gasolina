@@ -2,9 +2,10 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  background: rebeccapurple;
+  background: #553277;
   justify-content: center;
   border: solid 2px;
+  border-color: aliceblue;
   margin: 15px 14px auto 14px;
   border-radius: 30px;
 }
