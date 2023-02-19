@@ -10,11 +10,13 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   const [dataForm, setDataForm] = useState({
     name: '',
-    email: '',
-    subject: '',
-    content: ''
+    email: ''
   });
   const onChangeInput = e => setDataForm({ ...dataForm, [e.target.name]: e.target.value });
+  const sendNumber = async e => {
+    e.preventDefault()
+    console.log(dataForm)
+  }
 
   return (
     <>
@@ -31,7 +33,7 @@ export default function Home() {
           Utilize a calculadora abaixo:<br /><br />
         </h1>
 
-        <form>
+        <form onSubmit={sendNumber}>
           <div className="fields">
             <div className="field name">
               <label className={styles.fontLabel}>Preço - litro etanol (R$):</label><br/>
