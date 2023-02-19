@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [dataForm, setDataForm] = useState({
-    name: '',
-    email: ''
+    etanol: '',
+    gasolina: ''
   });
   const onChangeInput = e => setDataForm({ ...dataForm, [e.target.name]: e.target.value });
   const sendNumber = async e => {
@@ -21,13 +21,14 @@ export default function Home() {
   return (
     <>
       <div className={styles.thirteen}>
-        <Image
+ 
+        <Image className={styles['responsive-image']}
           src='/img/combustivel.png'
           alt="13"
-          width={300}
-          height={300}
-          priority
+          width={4000}
+          height={4000}
         />
+
         <h1 className={styles.font}>
           Você sabe qual combustível compensa mais abastecer seu carro?<br />
           Utilize a calculadora abaixo:<br /><br />

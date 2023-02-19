@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 
-
-
+.responsive-image {
+    width: 30%;
+    height: auto;
+}
+  
 .font {
     color:rgb(255, 255, 255);
     font: 2em sans-serif;   
@@ -52,4 +55,46 @@
 /* Remove as setas do input number em outros navegadores */
 .inputs[type=number] {
     -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 600px) {
+    .font {
+        font-size: 1.5em;
+    }
+
+    .fontLabel {
+        font-size: 1em;
+        margin-top: 2em;
+    }
+
+    .inputs {
+        width: 80%;
+        font-size: 1.2em;
+    }
+
+    .buttonArea {
+        width: 80%;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .font {
+        font-size: 1.2em;
+    }
+
+    .fontLabel {
+        font-size: 0.8em;
+        margin-top: 1.5em;
+    }
+
+    .inputs {
+        height: 30px;
+        font-size: 1em;
+    }
+
+    .buttonArea {
+        height: 30px;
+        font-size: 1em;
+    }
 }
