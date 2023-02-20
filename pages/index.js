@@ -16,9 +16,11 @@ export default function Home() {
 
   const calculoRentabilidade = (al,ga) => {
     const resultado = al/ga
-    if(resultado<0.7){
+    if(al==0||ga==0){
+      return "Insira um valor valido"
+    }else if (resultado<0.7) {
       return "álcool é a opção mais vantajosa"
-    }else{
+    }else {
       return "gasolina é a opção mais vantajosa"
     }
   }
@@ -65,7 +67,7 @@ export default function Home() {
           <div className="fields">
             <div className="field name">
               <label className={styles.fontLabel}>Resultado do calculo</label><br/>
-              <input className={styles.inputs} type="String" name="resultado"  onChange={onChangeInput} value={dataForm.resultado} />
+              <input className={styles.inputs} type="String" name="resultado"  onChange={onChangeInput} value={dataForm.resultado} disabled/>
             </div>
           </div>
 
