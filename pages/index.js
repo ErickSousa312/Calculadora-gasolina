@@ -10,12 +10,24 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   const [dataForm, setDataForm] = useState({
     etanol: '',
-    gasolina: ''
+    gasolina: '',
+    resultado:''
   });
+
+  const calculoRentabilidade = (al,ga) => {
+    const resultado = al/ga
+    if(resultado<0.7){
+      return "álcool é a opção mais vantajosa"
+    }else{
+      return "gasolina é a opção mais vantajosa"
+    }
+  }
+
   const onChangeInput = e => setDataForm({ ...dataForm, [e.target.name]: e.target.value });
   const sendNumber = async e => {
     e.preventDefault()
-    console.log(dataForm)
+    setDataForm({...dataForm, resultado:calculoRentabilidade(dataForm.etanol,dataForm.gasolina)})
+ 
   }
 
   return (
@@ -27,6 +39,7 @@ export default function Home() {
           alt="13"
           width={4000}
           height={4000}
+          priority
         />
 
         <h1 className={styles.font}>
@@ -37,17 +50,25 @@ export default function Home() {
         <form onSubmit={sendNumber}>
           <div className="fields">
             <div className="field name">
-              <label className={styles.fontLabel}>Preço - litro etanol (R$):</label><br/>
-              <input className={styles.inputs} type="number" name="name"  onChange={onChangeInput} value={dataForm.name} />
+              <label className={styles.fontLabel}>Preço - Litro etanol (R$):</label><br/>
+              <input className={styles.inputs} type="number" name="etanol"  onChange={onChangeInput} value={dataForm.etanol} />
             </div>
           </div>
 
           <div className="fields">
             <div className="field name">
-              <label className={styles.fontLabel}>Preço - litro gasolina (R$):</label><br/>
-              <input className={styles.inputs} type="number" name="email"  onChange={onChangeInput} value={dataForm.email} />
+              <label className={styles.fontLabel}>Preço - Litro gasolina (R$):</label><br/>
+              <input className={styles.inputs} type="number" name="gasolina"  onChange={onChangeInput} value={dataForm.gasolina} />
             </div>
           </div>
+
+          <div className="fields">
+            <div className="field name">
+              <label className={styles.fontLabel}>Resultado do calculo</label><br/>
+              <input className={styles.inputs} type="String" name="resultado"  onChange={onChangeInput} value={dataForm.resultado} />
+            </div>
+          </div>
+
           <div >
             <button className={styles.buttonArea} type="submit">Calcular</button>
           </div>
