@@ -4,14 +4,14 @@ import { MdHistory,MdArrowBackIos } from 'react-icons/md';
 import Link from 'next/link'
 
 
-function historico() {
+function Historico() {
   const [dados, setDados] = useState(null);
   const [erro, setErro] = useState(null);
 
-  useEffect(() => {
+  useEffect((e) => {
     async function fetchData() {
       try {
-        const response = await fetch('http://localhost:3002/historico/');
+        const response = await fetch('http://192.168.100.133:3002/historico');
         if (response.ok) {
           const data = await response.json();
           setDados(data);
@@ -49,4 +49,4 @@ function historico() {
       );
 }
 
-export default historico;
+export default Historico;
