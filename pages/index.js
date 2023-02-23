@@ -31,7 +31,7 @@ export default function Home() {
     const result1 = calculoRentabilidade(dataForm.alcool, dataForm.gasolina)
     setDataForm({...dataForm, resultado:result1})
     console.log(dataForm.alcool)
-    const a = await fetch('http://192.168.100.133:3002/historico/', {
+    const a = await fetch('http://52.67.104.142:3002/historico/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -83,7 +83,7 @@ export default function Home() {
           <div className="fields">
             <div className="field name">
               <label className={styles.fontLabel}>Resultado do calculo</label><br/>
-              <input className={styles.inputs} type="String" name="resultado"  onChange={onChangeInput} value={dataForm.resultado} disabled/>
+              <input className={styles.inputs} style={{textAlign: 'center'}} type="String" name="resultado"  onChange={onChangeInput} value={dataForm.resultado} disabled/>
             </div>
           </div>
 
