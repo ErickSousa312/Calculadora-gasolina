@@ -31,7 +31,7 @@ export default function Home() {
     const result1 = calculoRentabilidade(dataForm.alcool, dataForm.gasolina)
     setDataForm({...dataForm, resultado:result1})
     console.log(dataForm.alcool)
-    const a = await fetch('https://52.67.104.142:3002/historico/', {
+    const a = await fetch('http://52.67.104.142:3002/historico/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
