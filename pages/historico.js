@@ -11,7 +11,7 @@ function Historico() {
   useEffect((e) => {
     async function fetchData() {
       try {
-        const response = await fetch('http://52.67.104.142:3002/historico');
+        const response = await fetch('https://52.67.104.142:3002/historico');
         if (response.ok) {
           const data = await response.json();
           setDados(data);
