@@ -31,7 +31,7 @@ export default function Home() {
     const result1 = calculoRentabilidade(dataForm.alcool, dataForm.gasolina)
     setDataForm({...dataForm, resultado:result1})
     console.log(dataForm.alcool)
-    const a = await fetch('https://load-balance-api-node-1663700024.sa-east-1.elb.amazonaws.com/historico', {
+    const a = await fetch('https://api.warstarick.link/historico', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
