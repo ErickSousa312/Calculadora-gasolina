@@ -11,7 +11,7 @@ function Historico() {
   useEffect((e) => {
     async function fetchData() {
       try {
-        const response = await fetch('http://52.67.104.142:3002/historico');
+        const response = await fetch('https://load-balance-api-node-1663700024.sa-east-1.elb.amazonaws.com/historico');
         if (response.ok) {
           const data = await response.json();
           setDados(data);
